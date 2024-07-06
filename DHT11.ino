@@ -2,15 +2,15 @@
 #include <ESP8266WiFi.h>
 
 // Define the pin connected to the DHT sensor
-#define DHT_PIN 13 // Equivalent to D7
+#define DHT_PIN 13 // GPIO 13 Equivalent to D7 (Digit 7)
 
 // Initialize DHT sensor
 DHT dht(DHT_PIN, DHT11);
 WiFiClient client;
 
-String apiKey = "2Z9ZA8TVO2HN847S";
-const char *ssid =  "abou";
-const char *pass =  "abc12345";
+String apiKey = "2Z9ZA8TVO2HN847S"; //tooken from ThingSpeak channel
+const char *ssid =  "abou"; //wifi ssid
+const char *pass =  "abc12345"; 
 const char* server = "api.thingspeak.com";
 
 void setup() {
@@ -21,7 +21,8 @@ void setup() {
   delay(10);
   dht.begin();
   WiFi.begin(ssid, pass);
-
+  
+  //Verify Wi-Fi connection
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
