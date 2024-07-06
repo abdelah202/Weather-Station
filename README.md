@@ -23,7 +23,7 @@ This project involves building a weather station using an ESP8266 microcontrolle
    - This provides a structured way to store and manage historical data.
 
 5. **Data Visualization :**
-   - Data collected and stored in ThingSpeak and Google Sheets can be visualized using graphs and charts.
+   - Data collected and stored in ThingSpeak and Google Sheets (code.gs) can be visualized using graphs and charts.
    - Visualization helps in understanding trends and patterns in the weather data.
 
 ## ThingSpeak Contact Information
